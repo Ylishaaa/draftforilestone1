@@ -1,11 +1,11 @@
-body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
+.navbar {
+    background: #701e16;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
     font-family: 'Creepster', cursive;
-    margin: 0;
-    padding: 0;
-    color: white;
-  }
+}
   
   .red {
     color: #c21717;
