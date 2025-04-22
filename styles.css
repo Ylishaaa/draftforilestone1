@@ -1,95 +1,80 @@
 body {
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Creepster', cursive;
-    margin: 0;
-    padding: 0;
-    color: white;
-  }
-  
-  .red {
-    color: #c21717;
-  }
-  
-  nav {
-    background: url('navi.png') no-repeat center center fixed;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px;
-  }
-  
-  nav img {
-    width: 30px;
-    margin-left: 10px;
-  }
-  
-  .main-content {
-    display: flex;
-    padding: 40px;
-    justify-content: space-around;
-    background: url('grunge-bg.jpg'); /* Optional textured bg */
-    background-size: cover;
-  }
-  
-  .bio-box {
-    background: url('Text\ here.png');;
-    background-size: cover;
-    color: black;
-    padding: 20px;
-    margin-top: 60px; /* 🧠 Pushes it below the header */
-    border-radius: 10px;
-    max-width: 40%;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 0 10px red;
-    text-align: center;
-  }
-  
-  .dev-section {
-    text-align: center;
-    width: 50%;
-  }
-  
-  .dev-section h2 {
-    font-size: 2em;
-  }
-  
-  .dev-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    grid-auto-rows: auto; /* Automatic row height */
-    gap: 20px;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .dev-box {
-    border: 3px red;
-    height: 120px;
-    background: rgba(0,0,0,0.5);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Creepster', cursive;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
 
-  .dev-box1 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+header {
+  background: black;
+  padding: 20px;
+  text-align: center;
 }
-.dev-box2 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+
+.red {
+  color: #c21717;
 }
-.dev-box3 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+
+.navbar {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
-.dev-box4 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+
+.navbar img {
+  width: 40px;
+  height: 40px;
 }
-.dev-box5 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
 }
-.dev-box6 {
-    background-image: url('dave.jpg'); /* Optional decorative border */
+
+.bio-box {
+  background: white;
+  color: black;
+  border: 5px solid #c21717;
+  border-radius: 15px;
+  width: 60%;
+  height: 330px;
+  padding: 30px;
+  font-size: 1em;
+  overflow-y: auto;
+  box-shadow: 0 0 20px #c21717;
+  font-weight: bold;
+}
+
+.dev-section {
+  width: 35%;
+  text-align: center;
+}
+
+.dev-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.dev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.dev-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 2px solid white;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9em;
 }
