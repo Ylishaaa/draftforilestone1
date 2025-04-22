@@ -10,6 +10,13 @@ body {
   .red {
     color: #c21717;
   }
+
+  .navbar {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+   }
   
   nav {
     background: url('navi.png') no-repeat center center fixed;
