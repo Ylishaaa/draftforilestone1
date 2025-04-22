@@ -11,38 +11,32 @@ body {
     color: #c21717;
   }
 
-  header {
+  .header-bar {
+  background: #701e16;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
   position: relative;
-  height: 140px;
+  z-index: 1;
 }
 
-header h1 {
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  font-size: 3em;
+.header-bar h1 {
+  font-size: 2.5em;
   margin: 0;
+  color: white;
   text-shadow: 2px 2px 5px black;
 }
 
-/* Navbar */
 .navbar {
-  background: #701e16;
-  padding: 15px;
   display: flex;
-  justify-content: center;
-  gap: 40px;
-  font-family: 'Creepster', cursive;
-  position: relative;
-  z-index: 1;
-  margin-top: 40px;
+  gap: 30px;
 }
 
 .navbar img {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
   
   .main-content {
