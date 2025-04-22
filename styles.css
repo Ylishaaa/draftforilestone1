@@ -17,6 +17,11 @@ body {
     justify-content: center;
     gap: 20px;
    }
+
+  .navbar img {
+    width: 40px;
+    height: 40px;
+  }
   
   nav {
     background: url('navi.png') no-repeat center center fixed;
