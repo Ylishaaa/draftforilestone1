@@ -1,28 +1,29 @@
 body {
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Creepster', cursive;
-  margin: 0;
-  padding: 0;
-  color: white;
-}
-
-.red {
-  color: #c21717;
-}
-
-.navbar {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.navbar img {
-  width: 40px;
-  height: 40px;
-}
-
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Creepster', cursive;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  .red {
+    color: #c21717;
+  }
+  
+  nav {
+    background: url('navi.png') no-repeat center center fixed;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  nav img {
+    width: 30px;
+    margin-left: 10px;
+  }
+  
   .main-content {
     display: flex;
     padding: 40px;
