@@ -1,44 +1,38 @@
-// cookies.js
-
-// Function to set a cookie
-function setCookie(name, value, days) {
-    let expires = "";
-    if (days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
+function setCookie(cookieName, cookieValue, days = 365, path = "/") {
+      const date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      let expires = "expires=" + date.toUTCString();
+      document.cookie = `${cookieName}=${cookieValue}; ${expires}; path=${path}`;
     }
-    document.cookie = name + "=" + value + "; path=/" + expires;
-}
 
-// Function to get a cookie value
-function getCookie(name) {
-    let nameEQ = name + "=";
-    let cookies = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-        let c = cookies[i].trim();
-        if (c.indexOf(nameEQ) === 0) {
-            return c.substring(nameEQ.length);
+    function getCookie(cookieName) {
+      const name = cookieName + "=";
+      const decodedCookie = decodeURIComponent(document.cookie);
+      const ca = decodedCookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i].trim();
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
         }
+      }
+      return "";
     }
-    return null;
-}
 
-// Function to check and display username from cookies
-function checkUsername() {
-    let username = getCookie("username");
-    if (username) {
+    function checkUsername() {
+      const username = getCookie("username");
+      if (username) {
         document.getElementById("greeting").innerText = "Welcome back, " + username + "!";
+      }
     }
-}
 
-// Function to set username when user submits
-function setUsername() {
-    let username = document.getElementById("username").value;
-    if (/^[a-zA-Z0-9]+$/.test(username)) {
-        setCookie("username", username, 7); // Store for 7 days
+    function setUsername() {
+      const username = document.getElementById("username").value.trim();
+      if (/^[a-zA-Z0-9]+$/.test(username)) {
+        setCookie("username", username);
         document.getElementById("greeting").innerText = "Welcome, " + username + "!";
-    } else {
+      } else {
         alert("Username can only contain letters and numbers.");
+      }
     }
-}
+
+    window.onload = checkUsername;
